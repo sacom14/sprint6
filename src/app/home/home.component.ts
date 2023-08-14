@@ -1,6 +1,4 @@
 import { Component, resolveForwardRef } from '@angular/core';
-import { Text } from '../interface/textArray.interface';
-
 
 @Component({
   selector: 'app-home',
@@ -8,5 +6,9 @@ import { Text } from '../interface/textArray.interface';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  
+  public showEscena:boolean = false;
+
+  startEscena(){
+    this.showEscena = true;
+  }
 }
