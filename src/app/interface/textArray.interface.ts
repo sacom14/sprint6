@@ -1,6 +1,7 @@
 
 
 export interface Text{
-  sentence:string;
-  
+  txt:string;
+  img:string;
+
 }

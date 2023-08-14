@@ -1,5 +1,6 @@
-<app-home-escena *ngIf="showEscena"></app-home-escena>
-<div class="d-flex flex-column justify-content-center align-items-center vh-100">
+<app-home-escena></app-home-escena>
+<div class="d-flex flex-column justify-content-center align-items-center vh-100"
+*ngIf="!showEscena">
   <p class="text-center">Les aventures del nostre heroi</p>
-  <button *ngIf="!showEscena" class="btn btn-primary" (click)="startEscena()" >Començar</button>
+  <button  class="btn btn-primary" (click)="startEscena()" >Començar</button>
 </div>
