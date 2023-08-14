@@ -1,5 +1,14 @@
 <!-- <p>{{frase}}</p> -->
-<br>
-<p *ngFor="let sentence of storie.storyArrayText"
-class="border border-dark rounded-pill text-center p-3">
-{{sentence.sentence}}</p>
+<div class="m-3">
+  <button class="w-50 p-4 border-1" (click)="prev()">Anterior</button>
+  <button class="w-50 p-4 border-1" (click)="next()">Següent</button>
+</div>
+<div class="m-4">
+  <ul class="list-grop">
+    <li *ngFor="let sentence of storie.storyArrayText; let i = index"
+      class="list-group-item border border-dark rounded-pill text-center p-3 mb-3"
+      [ngClass]="{'bg-danger-subtle': i === currentSentence}">
+      {{sentence.sentence}}
+    </li>
+  </ul>
+</div>
